@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto TP 3</title>
+    <!-- Vinculación al CSS -->
+    <link rel="stylesheet" href="estilos/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!--Iconos Boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.JPG" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                River Plate
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-arrow-90deg-down"></i> <!-- Ícono personalizado -->
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="btn btn-dark me-2" href="/index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-dark me-2" href="https://www.instagram.com/riverplate/">Instagram</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-dark me-2" href="https://www.youtube.com/@riverplate">Youtube</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div id="descripcionCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#descripcionCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#descripcionCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#descripcionCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-aos="fade-up">
+                <img src="img/monumental.JPG" class="d-block w-100" alt="Estadio Monumental">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Estadio Monumental</h5>
+                    <p>El estadio renovado, un símbolo del Millonario.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-aos="fade-down">
+                <img src="img/gallardo.JPG" class="d-block w-100" alt="Gallardo">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Gallardo</h5>
+                    <p>El regreso del "Muñeco", un nuevo sueño comienza.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-aos="fade-right">
+                <img src="img/river-copa-libertadores-2018.JPG" class="d-block w-100" alt="Copa Libertadores 2018">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Copa Libertadores 2018</h5>
+                    <p>El inolvidable triunfo en Madrid.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Botones personalizados con iconos de Bootstrap -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#descripcionCarousel" data-bs-slide="prev">
+            <i class="bi bi-arrow-left-circle" style="font-size: 2rem; color: rgb(255, 255, 255);"></i>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#descripcionCarousel" data-bs-slide="next">
+            <i class="bi bi-arrow-right-circle" style="font-size: 2rem; color: rgb(255, 255, 255);"></i>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+    
+
+    <!-- Main Content -->
+    <main class="container my-5 flex-grow-1">
+        <!-- Título y Subtítulo -->
+        <section class="text-center mb-5" data-aos="fade-up">
+            <h1 class="fw-bold">De la mano de Gallardo, River volverá a ser campeón.</h1>
+            <p class="text-muted">Con la llegada del "Muñeco", los hinchas del Millonario se ilusionan con volver a dar la vuelta olímpica.</p>
+        </section>
+
+        <!-- Galería de imágenes -->
+        <section class="my-5">
+            <h3 class="text-center fw-bold" data-aos="zoom-in">La ilusión está intacta</h3>
+            <p class="text-center text-muted" data-aos="fade-up">La vuelta de Gallardo, nuevos fichajes y la experiencia. Combinación perfecta para ganar.</p>
+            <div class="row text-center">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <img src="img/gallardo.JPG" alt="Gallardo" class="img-fluid rounded mb-4" data-aos="flip-left">
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <img src="img/pezzella.JPG" alt="Refuerzos" class="img-fluid rounded mb-4" data-aos="flip-right">
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <img src="img/river-copa-libertadores-2018.JPG" alt="Experiencia" class="img-fluid rounded mb-4" data-aos="flip-up">
+                </div>
+            </div>
+        </section>
+
+        <!-- Botón para Modal -->
+        <section class="text-center">
+            <button class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#contactModal">Subscribite y obtené noticias de River</button>
+        </section>
+
+        <!-- Mensaje de confirmación -->
+        <div id="successMessage" class="alert alert-success d-none mt-3" role="alert">
+            ¡Formulario enviado exitosamente!
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-3 mt-auto text-center">
+        <p class="mb-0">Mi página Web Martin Gaido <i class="bi bi-heart-fill text-danger"></i></p>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Contacto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="contactForm" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="name" required>
+                            <div class="invalid-feedback">Ingresa tu nombre.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                            <div class="invalid-feedback">Ingresa un formato de email válido.</div>
+                        </div>
+                        <button type="submit" class="btn btn-success">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/code.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
